@@ -128,4 +128,39 @@
             transform: scale(1.2);
         }
     }
+
+    &__credentials {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        color: $clr-white;
+        padding: 20px;
+        background-color: $clr-btn;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__media {
+        display: flex;
+        gap: 20px;
+        font-size: 1.2rem;
+        a {
+            color: $clr-white;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .todo {
+        &__credentials {
+            font-size: 0.5rem;
+        }
+
+        &__media {
+            font-size: 0.8rem;
+            gap: 10px;
+        }
+    }
 }

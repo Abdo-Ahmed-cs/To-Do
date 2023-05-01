@@ -3,6 +3,8 @@ import "../style/style.css"
 import Task from './Task';
 import { editStatus, allTasks, newTask, editValue, editId, confirmEdit } from '../app/ToDoSlice';
 import {useDispatch, useSelector} from "react-redux"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faFacebook, faGithub, faLinkedinIn, faTwitter} from "@fortawesome/free-brands-svg-icons"
 
 export default function ToDo() {
     const dispatch = useDispatch()
@@ -12,6 +14,8 @@ export default function ToDo() {
     const editvalue = useSelector(editValue)
     const [value, setValue] = useState("");
     const [editTask, setEditTask] = useState('');
+
+    const currunt_year = new Date().getFullYear()
     
     const tasksElements = tasks.map(task => (
         <Task key={task.id} id={task.id} value={task.value} isDone={task.isDone}/>
@@ -57,6 +61,24 @@ export default function ToDo() {
                 {tasksElements}
             </div>
         </div>
+
+        <footer className='todo__credentials'>
+          <div><span>© Abdelrahman Ahmed / {currunt_year}</span></div>
+          <div className='todo__media'>
+            <a href="https://web.facebook.com/profile.php?id=100005933071217" target='_blank'>
+              <FontAwesomeIcon icon={faFacebook} beat/>
+            </a>
+            <a href="https://twitter.com/Abdo_Megahed03" target='_blank'>
+              <FontAwesomeIcon icon={faTwitter} beat/>
+            </a>
+            <a href="https://www.linkedin.com/in/abdelrahman-ahmed-saad-b74b35260/" target='_blank'>
+              <FontAwesomeIcon icon={faLinkedinIn} beat/>
+            </a>
+            <a href="https://github.com/Abdo-Ahmed-cs" target='_blank'>
+              <FontAwesomeIcon icon={faGithub} beat/>
+            </a>
+          </div>
+        </footer>
     </section>
   )
 }

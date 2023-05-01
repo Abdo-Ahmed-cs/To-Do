@@ -115,4 +115,35 @@
 }
 .todo__icon:hover {
   transform: scale(1.2);
+}
+.todo__credentials {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  color: #FFFFFF;
+  padding: 20px;
+  background-color: #a4c3b2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo__media {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+.todo__media a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .todo__credentials {
+    font-size: 0.5rem;
+  }
+  .todo__media {
+    font-size: 0.8rem;
+    gap: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
