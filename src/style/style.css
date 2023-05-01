@@ -98,6 +98,12 @@
   opacity: 0.5;
   transform: scale(0.95);
 }
+.todo__task span::-moz-selection {
+  background-color: transparent;
+}
+.todo__task span::selection {
+  background-color: transparent;
+}
 .todo__icons {
   display: flex;
   gap: 17px;
