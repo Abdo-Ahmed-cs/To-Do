@@ -1,6 +1,7 @@
 .todo {
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   background-color: #cce3de;
   display: flex;
   justify-content: center;
