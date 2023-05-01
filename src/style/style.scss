@@ -1,0 +1,115 @@
+@use './colors' as *;
+
+.todo {
+    width: 100vw;
+    height: 100vh;
+    background-color: $clr-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        background-color: $clr-cbg;
+        border-radius: 5px;
+        max-width: 470px;
+        width: 100%;
+        height: 80vh;
+        gap: 30px;
+    }
+
+    &__header {
+        font-size: 2rem;
+        width: fit-content;
+        color: $clr-white;
+        margin: 0;
+    }
+
+    &__forms {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__adding, &__editing {
+        display: flex;
+        // border: 1px solid red;
+        width: 100%;
+        input {
+            width: 100%;
+            border: 3px solid $clr-btn;
+            padding: 5px 10px;
+            font-size: 1rem;
+            border-right: transparent;
+            background-color: transparent;
+            outline: transparent;
+            color: $clr-white;
+
+            &:focus {
+                border: 3px solid $clr-btn2;
+                border-right: transparent;
+            }
+        }
+    }
+
+    &__btn {
+        white-space: nowrap;
+        padding: 6px 10px;
+        background-color: $clr-btn2;
+        border: 3px solid $clr-btn2;
+        color: $clr-black;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover {
+            background-color: $clr-btn;
+            border: 3px solid $clr-btn;
+            color: $clr-white;
+        }
+
+    }
+
+    &__tasks {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__task {
+        display: flex;
+        color: $clr-white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-radius: 3px;
+        background-color: $clr-btn;
+        transition: all 0.3s;
+        &--done {
+            opacity: 0.5;
+            transform: scale(0.95);
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: 17px;
+    }
+
+    &__icon {
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
