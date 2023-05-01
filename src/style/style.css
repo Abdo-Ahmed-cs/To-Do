@@ -33,6 +33,7 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  padding-right: 5px;
 }
 .todo__adding, .todo__editing {
   display: flex;
@@ -73,6 +74,15 @@
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  padding-right: 5px;
+}
+.todo__tasks::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+.todo__tasks::-webkit-scrollbar-thumb {
+  background-color: #eaf4f4;
+  border-radius: 5px;
 }
 .todo__task {
   display: flex;

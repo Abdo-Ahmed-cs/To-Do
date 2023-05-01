@@ -22,7 +22,7 @@ const todoSlice = createSlice({
             state.tasks.push(createTask(action.payload));
         },
         editTask: (state, action) => {
-            state.editStatus = true;
+            state.editStatus = !state.editStatus;
             state.taskId = action.payload.id;
             state.taskValue = action.payload.value;
         },
